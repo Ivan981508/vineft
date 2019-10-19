@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'Fredoka';
+	src: url('../fonts/FredokaOne-Regular.eot'), 
+	     url('../fonts/FredokaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto-bold';
+	src: url('../fonts/Roboto-Bold.eot'), 
+	     url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('../fonts/Roboto-Medium.eot'), 
+	     url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans-sb';
+	src: url('../fonts/OpenSans-SemiBold.eot'), 
+	     url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/OpenSans-Regular.eot'), 
+	     url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.eot'), 
+	     url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Rubik';
+	src: url('../fonts/Rubik-Regular.eot'), 
+	     url('../fonts/Rubik-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Rubik-Light';
+	src: url('../fonts/Rubik-Light.eot'), 
+	     url('../fonts/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Rubik-Bold';
+	src: url('../fonts/Rubik-Bold.eot'), 
+	     url('../fonts/Rubik-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Poiret';
+	src: url('../fonts/Poiret.eot'), 
+	     url('../fonts/Poiret.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../fonts/Pacifico.eot'), 
+	     url('../fonts/Pacifico.ttf') format('truetype');
+}
