@@ -4,6 +4,6 @@
 return array(
     'host' => 'localhost',
     'dbname' => 'vineft',
-    'user' => 'admin',
-    'password' => '0Q0s3X2b',
+    'user' => 'root',
+    'password' => 'pz7cPTWOl2',
 );

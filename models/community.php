@@ -66,11 +66,11 @@ class community
 
                 $result = $db->prepare("INSERT INTO `public`(`name`, `avatar`, `type`, `param`, `admin`) VALUES (:name,:avatar,:type,:param,:admin)");
 
-                $result->bindParam(':name', $name, PDO::PARAM_INT);
-                $result->bindParam(':avatar', $new_avatar, PDO::PARAM_STR);
-                $result->bindParam(':type', $type, PDO::PARAM_INT);
-                $result->bindParam(':param', $param, PDO::PARAM_STR);
-                $result->bindParam(':admin', $id_user, PDO::PARAM_STR);
+                $result->bindParam(':name', $name);
+                $result->bindParam(':avatar', $new_avatar);
+                $result->bindParam(':type', $type);
+                $result->bindParam(':param', $param);
+                $result->bindParam(':admin', $id_user);
                 $result->execute();
 
                 $last_id = $db->lastInsertId();

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var socket = io.connect('http://87.236.23.128:8008');
+    var socket = io.connect('http://45.90.32.110:8008');
 	window.data_reg = [];
     window.data_public = [];
     window.pageCreate = "none";
@@ -47,7 +47,6 @@ $(document).ready(function(){
     window.unreadMessage = unreadMessage;
     window.noticeInvite = noticeInvite;
     window.loading_message = true;
-
 
    	$("#main_page input").click(function(){
 		var link = $(this).parent('#main_page').attr("data-link");
@@ -109,6 +108,7 @@ $(document).ready(function(){
 	                about_me:data_reg['about_me'],
 	            },
 	            success: function(json){
+                    console.log(json);
 	                if(json.status == "success") {
                         $("#dynamic_layouts").html(json.data);
                         $("#dynamic_layouts").css("display","block");
@@ -203,7 +203,7 @@ $(document).ready(function(){
                         break;
                     case 'group': 
                         search_table = "public";
-                        title = "Настройки";
+                        title = "Сообщества";
                         break;
                     case 'setting': title = "Настройки";break;
                     default: title = "Vineft";break;
@@ -730,6 +730,7 @@ $(document).ready(function(){
     });
     function actionPublic(public_id){
         $.post( "/ajax/actionPublic",{"public_id":public_id}, function(data) {
+            console.log(data);
             if(data.status == "success")
             {
                 if(data.type == "leave") {
@@ -1126,7 +1127,7 @@ $(document).ready(function(){
                 if(data.id_user != "none") createUserDialog(data.id_user,active_dialog,1);
                 socket.emit('sendchat', data.id_message, message,my_id,type);
 
-                console.log("data.id_user - "+data.id_user);
+                //console.log("data.id_user - "+data.id_user);
             }
         },"json");
     }

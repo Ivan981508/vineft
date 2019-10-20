@@ -45,23 +45,23 @@ class user
                     $db = db::getConnection();
 
                     $result = $db->prepare("INSERT INTO `students`(`vk`, `name`, `avatar`, `birthday`, `city`, `stud_ticket`, `specialty`, `course`, `pol`, `about_me`, `date`, `settings`) VALUES (:vk,:name,:avatar,:birthday,:city,:stud_ticket,:specialty,:course,:pol,:about_me,'$date_reg','1,1,0')");
-                    $result->bindParam(':vk', $vk, PDO::PARAM_INT);
-                    $result->bindParam(':name', $name, PDO::PARAM_STR);
-                    $result->bindParam(':avatar', $new_avatar, PDO::PARAM_STR);
+                    $result->bindParam(':vk', $vk);
+                    $result->bindParam(':name', $name);
+                    $result->bindParam(':avatar', $new_avatar);
                     $result->bindParam(':birthday', $birthday);
-                    $result->bindParam(':city', $city, PDO::PARAM_STR);
-                    $result->bindParam(':stud_ticket', $stud_ticket, PDO::PARAM_INT);
-                    $result->bindParam(':specialty', $specialty, PDO::PARAM_INT);
-                    $result->bindParam(':course', $course, PDO::PARAM_INT);
-                    $result->bindParam(':pol', $pol, PDO::PARAM_STR);
-                    $result->bindParam(':about_me', $about_me, PDO::PARAM_STR);
+                    $result->bindParam(':city', $city);
+                    $result->bindParam(':stud_ticket', $stud_ticket);
+                    $result->bindParam(':specialty', $specialty);
+                    $result->bindParam(':course', $course);
+                    $result->bindParam(':pol', $pol);
+                    $result->bindParam(':about_me', $about_me);
                     $result->execute();
 
                     $id_user = $db->lastInsertId();
 
                     $db->query("INSERT INTO `contacts`(`id`) VALUES ('$id_user')");
 
-                    if($id_user == 0) return "fail";
+                    if($id_user == 0) return "fail2";
                     else {
                         $token = self::generateToken($vk);
                         $_SESSION['vneft_token'] = [$vk,$token];

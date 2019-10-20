@@ -232,10 +232,10 @@ class dialog
         else $sql = "INSERT INTO `dialogs`(`client1`, `client2`, `type`, `date`) VALUES (:user,:dialog,:type,:date_create)";
         $result = $db->prepare($sql);// Используется подготовленный запрос
 
-        if($type == "students") $result->bindParam(':user_delete', $user_delete, PDO::PARAM_STR);
-        $result->bindParam(':user', $id, PDO::PARAM_INT);
-        $result->bindParam(':dialog', $dialog, PDO::PARAM_INT);
-        $result->bindParam(':type', $type, PDO::PARAM_STR);
+        if($type == "students") $result->bindParam(':user_delete', $user_delete);
+        $result->bindParam(':user', $id);
+        $result->bindParam(':dialog', $dialog);
+        $result->bindParam(':type', $type);
         $result->bindParam(':date_create', $date);
         $result->setFetchMode(PDO::FETCH_ASSOC);// Указываем, что хотим получить данные в виде массива
                         
@@ -333,9 +333,9 @@ class dialog
                 $sql = "DELETE FROM `dialogs` WHERE ((client1=:client_id AND client2=:user_id) OR (client1=:user_id AND client2=:client_id)) AND type=:param";
                 $result = $db->prepare($sql);// Используется подготовленный запрос
 
-                $result->bindParam(':client_id', $dialog, PDO::PARAM_INT);
-                $result->bindParam(':user_id', $user, PDO::PARAM_INT);
-                $result->bindParam(':param', $param, PDO::PARAM_INT);
+                $result->bindParam(':client_id', $dialog);
+                $result->bindParam(':user_id', $user);
+                $result->bindParam(':param', $param);
                                 
                 $result->execute();// Выполнение коменды
 

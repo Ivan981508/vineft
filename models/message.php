@@ -242,10 +242,10 @@ class message
 
             $result->bindParam(':dialog_id', $dialog_id, PDO::PARAM_INT);
             $result->bindParam(':user', $user, PDO::PARAM_INT);
-            $result->bindParam(':message', $message, PDO::PARAM_INT);
-            $result->bindParam(':type', $type, PDO::PARAM_INT);
-            $result->bindParam(':user_read', $user_read, PDO::PARAM_INT);
-            $result->bindParam(':date_message', $date, PDO::PARAM_INT);
+            $result->bindParam(':message', $message, PDO::PARAM_STR);
+            $result->bindParam(':type', $type);
+            $result->bindParam(':user_read', $user_read);
+            $result->bindParam(':date_message', $date);
             $result->setFetchMode(PDO::FETCH_ASSOC);// Указываем, что хотим получить данные в виде массива
                 
             $result->execute();// Выполнение коменды

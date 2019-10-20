@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/template/style/nice-select.css">
     <link rel="stylesheet" href="/template/style/datepicker.min.css">
     <script src="/socket.io/socket.io.js"></script>
-    <script src="http://87.236.23.128:8008/socket.io/socket.io.js"></script>
+    <script src="http://45.90.32.110:8008/socket.io/socket.io.js"></script>
     <script src="/public/js/jquery-3.2.1.min.js"></script>
     <script src="/public/js/jquery.nice-select.min.js"></script>
     <script src="/public/js/jquery.nicescroll.min.js"></script>

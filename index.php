@@ -8,5 +8,3 @@ require_once(ROOT.'/components/Autoload.php');
 // Вызов Router
 $router = new Router();
 $router->run();
-
- 
